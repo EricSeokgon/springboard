@@ -19,10 +19,22 @@ public class BoardController {
 	private MainService mainService;
 	
 	
+	@RequestMapping("/ajaxView.do")
+	public void ajaxView(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
+	}
+	
+	
+	
 	@RequestMapping("/list.do")
 	public void list(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
 		model.put("results", mainService.getList(paramMap));
 	}
+	
+	@RequestMapping("/listJson.do")
+	public  @ResponseBody Map<?,?> listJson(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
+		model.put("results", mainService.getList(paramMap));
+		return model;
+	}	
 	
 	@RequestMapping("/hello.do")
 	public void hello(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{

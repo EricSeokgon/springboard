@@ -19,6 +19,7 @@
 	</script>
 
 </head>
+<body>
 <table border="1" width="600px" >
 <form name="boardFrm" action="writeProc.do" method="post">
 <tr>
@@ -45,4 +46,5 @@
 </tr>
 </form>
 </table>
+</body>
 </html>
