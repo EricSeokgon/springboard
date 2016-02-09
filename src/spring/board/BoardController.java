@@ -19,6 +19,11 @@ public class BoardController {
 	private MainService mainService;
 	
 	
+	@RequestMapping("/list.do")
+	public void list(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
+		model.put("results", mainService.getList(paramMap));
+	}
+	
 	@RequestMapping("/hello.do")
 	public void hello(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
 		model.put("title", "나의 첫번째 스프링");
@@ -52,6 +57,8 @@ public class BoardController {
 		return mav;
 
 	}
+		
+
 	
 
 }
