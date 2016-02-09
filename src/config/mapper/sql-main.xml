@@ -8,4 +8,8 @@
 	  select now()
 	</select>
 	
+	<insert id="writeProc"  parameterType="java.util.Map">
+	 	insert into springboard(title,content) values(#{title},#{content})
+	</insert>
+	
 </mapper>
