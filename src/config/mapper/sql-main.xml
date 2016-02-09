@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd"> 
+
+<mapper namespace="main">
+
+	<!-- 오늘 날짜를 가지고 온다  -->
+	<select id="getToday"  resultType="java.lang.String">
+	  select now()
+	</select>
+	
+</mapper>
